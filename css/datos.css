@@ -1,0 +1,41 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.my-form {
+    width: 100%; /* Ancho total */
+    max-width: 500px; /* Ancho máximo */
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input__field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input__field:focus {
+    border-color: #00304D;
+    outline: none;
+}
+
+.my-form__button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00304D;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.my-form__button:hover {
+    background-color: #005f7f;
+}

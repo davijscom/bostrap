@@ -1,0 +1,217 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima de la ventana */
+    margin: 0; /* Eliminar margen por defecto */
+    background: linear-gradient(to bottom right, #f8f9fa, #e2e6ea); /* Gradiente moderno */
+    font-family: 'Arial', sans-serif; /* Fuente moderna */
+}
+
+
+
+
+/* Asegúrate de que el fondo azul oscuro se aplique correctamente */
+.navbar {
+    background-color: #00304D; /* Color de fondo azul oscuro */
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+/* Estilo para el texto de la marca en la navbar */
+.navbar-brand {
+    font-weight: 500;
+    color: #ffffff; /* Texto blanco para mejor contraste */
+    font-size: 24px;
+}
+
+/* Estilo para los botones de login */
+.login-button {
+    background-color: #ffffff; /* Fondo blanco para el botón */
+    color: #000000; /* Texto en color azul oscuro */
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    border: 1px solid #00304D; /* Borde azul oscuro para el botón */
+}
+
+.login-button:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+    color: #00304D; /* Mantiene el texto en azul oscuro */
+}
+
+/* Estilo para el toggler de la navbar */
+.navbar-toggler {
+    border: 1px solid #ffffff; /* Borde blanco para el botón */
+    color: #ffffff; /* Icono del toggler en blanco */
+    font-size: 1.5rem;
+}
+
+/* Estilo para el nav-link */
+.nav-link {
+    color: #ffffff; /* Texto blanco para mejor contraste */
+    font-weight: 500;
+    position: relative;
+}
+
+/* Estilo para el nav-link en hover y activo */
+.nav-link:hover, .nav-link.active {
+    color: #f0f0f0; /* Texto en blanco más claro en hover y estado activo */
+}
+
+@media (min-width: 997px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #009970; /* Color verde para el subrayado */
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/* Estilo para la sección hero */
+.hero-section {
+    background: url(hero-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.hero-section::before {
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 1.5em;
+}
+
+.card-title-with-line {
+    text-align: center; /* Centra el texto del título */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 24px; /* Tamaño de fuente del título */
+}
+
+.card-title-with-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #009970; /* Color de la línea */
+}
+
+.row {
+    display: flex; /* Asegura que las columnas se alineen en una fila */
+    justify-content: space-between; /* Espacia uniformemente las tarjetas */
+}
+
+/* Estilo para la tarjeta */
+.card {
+    background-color: #E6E6E6; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Asegura que la tarjeta use todo el ancho de su columna */
+    max-width: 350px; /* Ancho máximo para que se mantenga proporcionada */
+    margin: 0 10px; /* Espaciado entre tarjetas */
+}
+
+/* Ajustar el contenedor principal */
+.main-content {
+    padding-top: 20px; /* Ajuste adicional si es necesario */
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+    flex-direction: column; /* Para apilar el contenido verticalmente */
+}
+
+.repository-title {
+    color: #39A900; /* Color verde */
+    font-size: 38px; /* Tamaño de fuente del título */
+    margin-top: 200px; /* Margen superior para evitar que esté pegado a la navbar */
+    margin-bottom: 13px; /* Margen inferior */
+}
+
+.repository-description {
+    font-size: 18px; /* Tamaño de fuente del texto descriptivo */
+    color: #6E6E6E; /* Color del texto descriptivo */
+    margin-bottom: 40px; /* Margen inferior para espacio entre la descripción y la tarjeta */
+}
+
+/* Estilo para el botón de registrarse */
+.register-button {
+    background-color: #39A900; /* Color verde */
+    color: #ffffff; /* Texto blanco */
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    border: 1px solid #39A900; /* Borde verde */
+    margin-left: 10px; /* Espacio entre botones */
+}
+
+.register-button:hover {
+    background-color: #32a800; /* Color más oscuro al pasar el mouse */
+    color: #ffffff; /* Mantiene el texto en blanco */
+}
+
+/* ... resto del CSS ... */
+
+/* Desplazar tarjeta "OBJETIVO" a la izquierda y "MISIÓN" a la derecha */
+.card-container {
+    display: flex; /* Alinea las tarjetas horizontalmente */
+    justify-content: space-between; /* Espacio entre las tarjetas */
+}
+
+.card-container .col-md-5 {
+    margin: 0; /* Elimina el margen predeterminado de Bootstrap */
+}
+
+.card-container .col-md-5:first-child {
+    margin-right: auto; /* Desplaza la tarjeta "OBJETIVO" a la izquierda */
+}
+
+.card-container .col-md-5:last-child {
+    margin-left: 20px; /* Espacio a la derecha de la tarjeta "MISIÓN" */
+}
+
+.card {
+    height: 100%; /* Asegura que ambas tarjetas tengan la misma altura */
+}
+
+.separator {
+    width: 50%; /* Ajusta el ancho de la línea */
+    height: 2px; /* Altura de la línea */
+    background-color: #009970; /* Color de la línea */
+    margin: 0.5rem auto; /* Espaciado superior e inferior, centrado automáticamente */
+}
+
